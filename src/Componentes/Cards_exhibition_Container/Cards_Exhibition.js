@@ -1,43 +1,57 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./Cards_Exhibition.css";
-import Card from "../Cards/Card";
+import Card_Real from "../Cards/Card";
 
 import card1 from "../../imagens/cards/image 30.png"
 import card2 from "../../imagens/cards/card.png"
+import { data } from "react-router-dom";
 
-let teste;
 
-
-function DefinirPreço(pricesTable)
-{
-  
-    
-    
-
-  /*switch(pricesTable[0])
-  {
-    case "holofoil":
-        return pricesTable.holofoil
-    break;
-
-    case "normal":
-        return pricesTable.normal
-    break;
-
-    case "reverseHolofoil":
-        return pricesTable.reverseHolofoil
-    break;
-
-    case "1stEditionHolofoil":
-        return pricesTable.unlimitedHolofoil
-    break;
-  }*/
-}
-    
 
 function Cards_Exhibition(props)
 {
+
+    const [Card, setCard] = useState([])
+    console.log(Card)
+
+    function GetCard(CardType, LimitCard, Randomizer)
+    {
+        const TableCardType = [
+            {nameType: "Pokemon", Url: "https://api.pokemontcg.io/v2/cards", requestData: undefined},
+        ]
+
+        function Randomizer(min, max, tableCard)
+        {
+            let CardRandomTable = []
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            let rand_number = Math.floor(Math.random() * (max - min) + min)
+
+            for(let i=0; i < LimitCard; i++)
+            {
+                rand_number = Math.floor(Math.random() * (max - min) + min)
+                CardRandomTable.push(tableCard[rand_number])
+            }
+
+            setCard(CardRandomTable)
+        }
+
+        TableCardType.forEach(ApiType => 
+        {
+            fetch(ApiType.Url, {
+                method: 'GET'
+            }).then(resultType => resultType.json()).then((result)=>{
+                Randomizer(1, 250, result.data)
+                console.log('Request Executada com sucesso!')
+            })
+        });
+
+    }
+
+    useEffect(()=>{
+        GetCard(props.CardType, 5, true)
+    }, [])
 
     return (
         <div className="cards_exhibition_container">
@@ -48,16 +62,14 @@ function Cards_Exhibition(props)
 
             <div className="cards_exhibition_content">
                 {
-                    props.randomCardTable.map(
-                    (dado)=>(
-                        //<Card key={dado.id} price={dado.cardmarket != undefined? dado.cardmarket.prices.trendPrice + "€" : "2.50€"}></Card> 
-                        <Card key={dado.id} image={dado.images.large} price={dado.cardmarket != undefined? dado.cardmarket.prices.trendPrice + "€" : "2.50€"}></Card>
-                    )
-
-                    )
+                    Card.map((dataCard)=>(
+                        <Card_Real key={dataCard.id} image={dataCard.images?.large} price={Object.values(dataCard.tcgplayer?.prices)[0].mid + " R$"}></Card_Real>
+                    ))
                 }
             </div>
         </div>
     )
 }
 export default Cards_Exhibition; 
+
+//<Card key={dataCard.id} price={Object.values(dataCard.tcgplayer?.prices)[0].mid}></Card>

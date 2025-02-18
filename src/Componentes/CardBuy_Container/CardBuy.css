@@ -33,16 +33,16 @@ table {
     margin-top: 40px;
 }
 
-tr {
+.table_row_cb {
     text-align: center;
 }
 
-th {
+.table_header_cb {
     font-size: 12px;
     padding: 3px;
 }
 
-input {
+.input_quantity_cb {
     width: 30px;
     background-color: pink;
     border-radius: 5px;
@@ -63,7 +63,7 @@ input {
     box-shadow: 0px 2px 1px black;
 }
 
-td {
+.table_data_cb {
     font-size: 12px;
     padding: 10px;
     white-space: nowrap;

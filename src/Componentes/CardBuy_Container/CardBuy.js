@@ -16,38 +16,40 @@ function CardBuy()
 
             <table>
                 <tr className="table_header">
-                    <th>Idioma</th>
-                    <th>Qualidade</th>
-                    <th>Extra</th>
-                    <th>Estoque</th>
-                    <th>Preço</th>
+                    <th className="table_header_cb">Idioma</th>
+                    <th className="table_header_cb">Qualidade</th>
+                    <th className="table_header_cb">Extra</th>
+                    <th className="table_header_cb">Estoque</th>
+                    <th className="table_header_cb">Preço</th>
                 </tr>
-                <tr className="table_row_price">
-                    <td><img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/simbolos-nacionais/bandeira/bandeiranacionalbrasil_.jpg"></img></td>
-                    <td>SP</td>
-                    <td>Foil</td>
-                    <td>2 unid</td>
-                    <td>129,00 R$</td>
-                    <td><input/></td>
-                    <td><img src={BuyCar} id="buycar_CardBuy"></img></td>
+                <tr className="table_row_price table_row_cb">
+                    <td className="table_data_cb"><img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/simbolos-nacionais/bandeira/bandeiranacionalbrasil_.jpg"></img></td>
+                    <td className="table_data_cb">SP</td>
+                    <td className="table_data_cb">Foil</td>
+                    <td className="table_data_cb">2 unid</td>
+                    <td className="table_data_cb">129,00 R$</td>
+                    <td className="table_data_cb"><input className="input_quantity_cb"/></td>
+                    <td className="table_data_cb"><img src={BuyCar} id="buycar_CardBuy"></img></td>
                 </tr>
-                <tr className="table_row_price">
-                    <td><img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/simbolos-nacionais/bandeira/bandeiranacionalbrasil_.jpg"></img></td>
-                    <td>SP</td>
-                    <td>Foil</td>
-                    <td>2 unid</td>
-                    <td>129,00 R$</td>
-                    <td><input/></td>
-                    <td><img src={BuyCar} id="buycar_CardBuy"></img></td>
+
+                <tr className="table_row_price table_row_cb">
+                    <td className="table_data_cb"><img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/simbolos-nacionais/bandeira/bandeiranacionalbrasil_.jpg"></img></td>
+                    <td className="table_data_cb">SP</td>
+                    <td className="table_data_cb">Foil</td>
+                    <td className="table_data_cb">2 unid</td>
+                    <td className="table_data_cb">129,00 R$</td>
+                    <td className="table_data_cb"><input className="input_quantity_cb"/></td>
+                    <td className="table_data_cb"><img src={BuyCar} id="buycar_CardBuy"></img></td>
                 </tr>
-                <tr className="table_row_price">
-                    <td><img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/simbolos-nacionais/bandeira/bandeiranacionalbrasil_.jpg"></img></td>
-                    <td>SP</td>
-                    <td>Foil</td>
-                    <td>2 unid</td>
-                    <td>129,00 R$</td>
-                    <td><input/></td>
-                    <td><img src={BuyCar} id="buycar_CardBuy"></img></td>
+
+                <tr className="table_row_price table_row_cb">
+                    <td className="table_data_cb"><img src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/acervo/simbolos-nacionais/bandeira/bandeiranacionalbrasil_.jpg"></img></td>
+                    <td className="table_data_cb">SP</td>
+                    <td className="table_data_cb">Foil</td>
+                    <td className="table_data_cb">2 unid</td>
+                    <td className="table_data_cb">129,00 R$</td>
+                    <td className="table_data_cb"><input className="input_quantity_cb"/></td>
+                    <td className="table_data_cb"><img src={BuyCar} id="buycar_CardBuy"></img></td>
                 </tr>
             </table>
         </div>
