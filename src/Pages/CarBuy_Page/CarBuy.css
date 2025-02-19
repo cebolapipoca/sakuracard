@@ -162,3 +162,33 @@
     }
 }
 
+.CardBuy_Section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.formCardBuy {
+    width: 82%;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    & h1 {
+        font-size: 20px;
+        border-bottom: 1px solid;
+    }
+}
+
+.button_cb {
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 13px;
+}
