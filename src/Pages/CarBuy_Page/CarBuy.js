@@ -4,6 +4,8 @@ import Header from '../../Componentes/HeaderComponent/Header'
 import '../CarBuy_Page/CarBuy.css'
 import CardImage from '../../imagens/cards/card.png'
 import InputSakura from "../../Componentes/Input/InputSakura";
+import Login from "../../Componentes/Login/Login";
+import Cadastro from "../../Componentes/Cadastro/Cadastro";
 
 function CarBuy()
 {
@@ -18,7 +20,7 @@ function CarBuy()
         
         <div>
             <Header/>
-
+            
             <div className="shopCart_Content_Page">
                 <h1 className="Cart_title">Carrinho</h1>
                 <div className="CartShopping_ItensContainer">
