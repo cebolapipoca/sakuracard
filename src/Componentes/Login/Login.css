@@ -11,6 +11,14 @@
     align-items: center;
 }
 
+.exit_button {
+    font-size: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 2%;
+    left: 85%;
+}
+
 .Login_Box {
     width: 80%;
     padding: 30px;
@@ -31,6 +39,13 @@
 
         & a {
             text-decoration: none;
+            color: rgb(180, 73, 93);
+            border-bottom: 1px solid;
+            cursor: pointer;
+        }
+
+        & a:hover {
+            color: rgb(141, 50, 67);
         }
     }
 }
@@ -77,5 +92,6 @@
 }
 
 #Cadastro {
-    display: none;
+    display: flex;
 }
+

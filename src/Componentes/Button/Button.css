@@ -7,3 +7,10 @@
     background-color: white;
     box-shadow: 1px 4px 6px 2px #d39c9c;
 }
+
+@media screen and (min-width: 800px) {
+    .Sakura_Button {
+        font-size: 15px;
+        width: 30%;
+    }
+}

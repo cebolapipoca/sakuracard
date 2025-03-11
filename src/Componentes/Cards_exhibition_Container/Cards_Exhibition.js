@@ -50,7 +50,7 @@ function Cards_Exhibition(props)
     }
 
     useEffect(()=>{
-        GetCard(props.CardType, 5, true)
+        GetCard(props.CardType, 6, true)
     }, [])
 
     return (
@@ -62,9 +62,11 @@ function Cards_Exhibition(props)
 
             <div className="cards_exhibition_content">
                 {
+                    
                     Card.map((dataCard)=>(
-                        <Card_Real key={dataCard.id} image={dataCard.images?.large} price={Object.values(dataCard.tcgplayer?.prices)[0].mid + " R$"}></Card_Real>
+                        <Card_Real keys={dataCard.id} image={dataCard.images?.large} price={Object.values(dataCard.tcgplayer?.prices)[0].mid + " R$"}></Card_Real>
                     ))
+                
                 }
             </div>
         </div>

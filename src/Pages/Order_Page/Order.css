@@ -1,0 +1,23 @@
+
+.Order_Title {
+    margin-top: 130px;
+    margin-left: 20px;
+    
+    border-bottom: 1px solid;
+
+    & h1 {
+        font-size: 30px;
+    }
+
+    & img {
+
+    }
+}
+
+.myorder_list {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

@@ -5,18 +5,20 @@ import Cards_Exhibition from "../../Componentes/Cards_exhibition_Container/Cards
 import CardBuy from "../../Componentes/CardBuy_Container/CardBuy";
 
 
-
 function Card_Page()
 {
 
+    
+
     return (
-        <body>
+        <div>
             <Header/>
             <CardBuy/>
-            <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
-            <Cards_Exhibition title="Pokémon" CardType="Yugioh"/>
-        </body>
+        </div>
     )
 }
+
+// <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
+//<Cards_Exhibition title="Pokémon" CardType="Yugioh"/>
 
 export default Card_Page;

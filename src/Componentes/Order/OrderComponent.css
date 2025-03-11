@@ -1,0 +1,88 @@
+
+.image_container {
+    width: 100px;
+}
+
+.Order {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+    width: 98%;
+    box-sizing: border-box;
+    border-radius: 25px;
+    position: relative;
+    background: linear-gradient(to right, rgb(248, 177, 189), rgb(255, 255, 255));
+    box-shadow: 4px 4px 8px black;
+    margin-bottom: 30px;
+
+    & summary {
+        width: 50%;
+
+        & .entrega {
+            font-size: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid;
+            margin-left: 10px;
+        }
+    }
+
+    & .Order_1 {
+        display: flex;
+        gap: 100px;
+        align-items: center;
+        width: 100%;
+
+        & h1 {
+            font-size: 20px;
+        }
+
+        & h2 {
+            font-size: 16px;
+        }
+    }
+
+    & .Order_2 {
+        width: 100%;
+
+        & h3 {
+            font-size: 15px;
+        }
+    }
+
+    & .image_card_order {
+        width: 100%;
+        width: 100px;
+    }
+}
+
+.order_content {
+    display: flex;
+    gap: 20px;
+}
+
+.order_buttons {
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    left: 65%;
+    top: 24%;
+    width: 30%;
+
+    & button {
+        width: 100%;
+        padding: 15px;
+        font-size: 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        border: none;
+        background-color: pink;
+    }
+
+    & button:hover {
+        background-color: rgba(253, 96, 127, 0.808);
+        color: white;
+    }
+}

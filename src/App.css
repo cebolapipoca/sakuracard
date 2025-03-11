@@ -1,4 +1,8 @@
 
+* {
+  transition: 1s;
+}
+
 .nav_Buttons 
 {
   width: 100%;

@@ -5,13 +5,18 @@ import Card2 from "../../imagens/cards/image 30.png"
 
 
 
+
 function Card(props)
 {
     return (
-        <div className="Card">
+
+    <a className="Card" href={'/Card/' + props.keys}>
+        <div>
             <img src={props.image}></img>
             <h2>{props.price}</h2>
+            <h2>{props.key}</h2>
         </div>
+    </a>
     )
 }
 

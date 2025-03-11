@@ -5,6 +5,8 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Card_Page from './Pages/Card_Page/Card_Page.js';
 import CarBuy from './Pages/CarBuy_Page/CarBuy.js';
+import FavoritePage from './Pages/Favorite_Page/Favorite.js';
+import Order from './Pages/Order_Page/Order.js';
 
 const Router = createBrowserRouter([
         {
@@ -12,12 +14,20 @@ const Router = createBrowserRouter([
                 element: <App/>
         },
         {
-                path: '/Card',
+                path: '/Card/:id',
                 element: <Card_Page/>
         },
         {
                 path: '/CarBuy',
                 element: <CarBuy/>
+        },
+        {
+                path: '/Favorites',
+                element: <FavoritePage/>
+        },
+        {
+                path: '/MyOrder',
+                element: <Order/>
         },
 ])
 

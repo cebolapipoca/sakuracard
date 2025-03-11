@@ -26,7 +26,7 @@ function InputSakura(props)
             return (
                 <div className="Input_Label" style={{width: props.width}}>
                     <label>{props.label}</label>
-                    <select className="Input_Sakura">
+                    <select className="Input_Sakura" name={props.InputNome}>
                         {props.options.map((option)=>(
                             <option value={option.value}>{option.text}</option>
                         ))}

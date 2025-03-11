@@ -7,15 +7,27 @@ import SlideImage from './Componentes/Slide_Images/SlideImage'
 import Button from './Componentes/Button/Button'
 import Cards_Exhibition from './Componentes/Cards_exhibition_Container/Cards_Exhibition';
 
+import Login from './Componentes/Login/Login';
+import Cadastro from './Componentes/Cadastro/Cadastro';
+import Lupa_Icon from './imagens/icons/lupa_icon.svg'
+
 function App() {
 
   
   
 
   return (
-    <body>
+    <div>
       <Header></Header>
+
+      <div className="header_searchBar">
+            <input type="text"></input>
+            <button><img src={Lupa_Icon}></img></button>
+      </div>
+
       <SlideImage></SlideImage>
+      <Login/>
+      <Cadastro/>
 
       <nav className='nav_Buttons'>
         <Button ButtonText="Novas Coleções"/>
@@ -25,9 +37,7 @@ function App() {
 
       
       <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
-      <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
-      <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
-    </body>
+  </div>
   );
 }
 

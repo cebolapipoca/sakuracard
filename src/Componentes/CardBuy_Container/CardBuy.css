@@ -1,36 +1,71 @@
 
 
+.Card_Title {
+    width: 85%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    & h1 {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    & img {
+        width: 10%;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+}
+
+
+
 .CarBuy_Section {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
+    flex-direction: column;
+    
 }
 
 .CardBuy_Container {
-    width: 100%;
-    margin-top: 30px;
+    width: 90%;
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
+    background: linear-gradient(to right, #FDDEDE, #FDE7E7, #FDF0F0, #FDEAEA);
+    
 }
 
 .ShowCardImage {
     display: flex;
     gap: 10px;
     justify-content: center;
+    flex-direction: column;
+    width: 90%;
+
+    & .Card_Image {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
 
     & img {
-        width: 47%;
+        width: 50%;
     }
 }
 
-table {
+.table_cardbuy {
     width: 90%;
     margin-top: 40px;
+    
 }
 
 .table_row_cb {
@@ -57,6 +92,7 @@ table {
 
 .table_header {
     background-color: pink;
+    
 }
 
 .table_row_price {

@@ -1,0 +1,21 @@
+
+.Favorite_Title {
+    margin-top: 150px;
+    margin-left: 20px;
+    border-bottom: 1px solid;
+    width: 220px;
+    color: rgb(235, 157, 170);
+    font-weight: 800;
+}
+
+.favorite_list {
+    border: 1px solid;
+    margin-top: 10px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
