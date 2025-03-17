@@ -31,7 +31,17 @@ function Cards_Exhibition(props)
             for(let i=0; i < LimitCard; i++)
             {
                 rand_number = Math.floor(Math.random() * (max - min) + min)
-                CardRandomTable.push(tableCard[rand_number])
+
+                try {
+                    if(Object.values(tableCard[rand_number].tcgplayer.prices)[0].low != undefined)
+                    {
+                        CardRandomTable.push(tableCard[rand_number])
+                    }
+                }catch {
+                    i--
+                }
+
+                //CardRandomTable.push(tableCard[rand_number])
             }
 
             setCard(CardRandomTable)

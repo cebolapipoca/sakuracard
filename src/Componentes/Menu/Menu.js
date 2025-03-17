@@ -20,6 +20,7 @@ import { AbrirMenu } from "../HeaderComponent/Header";
         if(abrir)
         {
             LoginMenu.style.display = 'flex'
+            
         }
         else
         {
@@ -51,29 +52,33 @@ import { AbrirMenu } from "../HeaderComponent/Header";
 function Menu()
 {
     return (
-        <menu className="SakuraMenu" id="SakuraMenu">
-            <div className="MenuContent">
-                <div className="user_box_menu">
-                    <img src={user_icon}/>
-                    
-                    <div className="user_box_buttons">
-                        <button onClick={()=>AbrirLogin(true)} >Entrar</button>
-                        <button onClick={()=>AbrirCadastro(true)}>Criar Conta</button>
+        <div>
+            <Login/>
+            <Cadastro/>
+            <menu className="SakuraMenu" id="SakuraMenu">
+                <div className="MenuContent">
+                    <div className="user_box_menu">
+                        <img src={user_icon}/>
+                        
+                        <div className="user_box_buttons">
+                            <button onClick={()=>AbrirLogin(true)} >Entrar</button>
+                            <button onClick={()=>AbrirCadastro(true)}>Criar Conta</button>
+                        </div>
                     </div>
+
+                    <ul>
+                        <a href="/Favorites"><img src={heart_icon}/>Favoritos</a>
+                        <a><img src={bag_icon} />Meus Pedidos</a>
+                        <a><img src={card_icon} />Cartas</a>
+                        <a><img src={shield_icon}/>Poaticas de privacidade</a>
+                        <a><img src={programming_icon}/>Desenvolvedores</a>
+                        <a><img src={gear_icon}/>Configurações</a>
+                    </ul>
                 </div>
 
-                <ul>
-                    <li><img src={heart_icon}/>Favoritos</li>
-                    <li><img src={bag_icon} />Meus Pedidos</li>
-                    <li><img src={card_icon} />Cartas</li>
-                    <li><img src={shield_icon}/>Politicas de privacidade</li>
-                    <li><img src={programming_icon}/>Desenvolvedores</li>
-                    <li><img src={gear_icon}/>Configurações</li>
-                </ul>
-            </div>
-
-            <img src={arrow_icon} id="arrow_exit_menu" onClick={()=>AbrirMenu(false)}/>
-        </menu>
+                <img src={arrow_icon} id="arrow_exit_menu" onClick={()=>AbrirMenu(false)}/>
+            </menu>
+        </div>
     )
 }
 

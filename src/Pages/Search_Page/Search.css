@@ -1,0 +1,22 @@
+
+.cardsExibhitionAll {
+    
+    width: 100%;
+    margin-top: 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .cardExibhitionBox {
+        width: 80%;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: pink;
+        border-radius: 20px;
+        padding: 10x;
+    }
+}

@@ -1,4 +1,10 @@
 
+* {
+    a {
+        text-decoration: none;
+    }
+}
+
 .SakuraMenu {
     width: 100%;
     position: fixed;
@@ -65,7 +71,7 @@
         flex-direction: column;
         gap: 20px;
 
-        & li {
+        & a {
 
             font-size: 20px;
             padding-top: 10px;
@@ -77,7 +83,7 @@
             gap: 20px;
             cursor: pointer;
             box-shadow: 0px 10px 6px 1px rgb(224, 159, 159);
-            
+            color: black;
 
             & img {
                 width: 8%;

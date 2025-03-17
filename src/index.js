@@ -7,6 +7,7 @@ import Card_Page from './Pages/Card_Page/Card_Page.js';
 import CarBuy from './Pages/CarBuy_Page/CarBuy.js';
 import FavoritePage from './Pages/Favorite_Page/Favorite.js';
 import Order from './Pages/Order_Page/Order.js';
+import Search from './Pages/Search_Page/Search.js';
 
 const Router = createBrowserRouter([
         {
@@ -28,6 +29,10 @@ const Router = createBrowserRouter([
         {
                 path: '/MyOrder',
                 element: <Order/>
+        },
+        {
+                path: '/Search/:q',
+                element: <Search/>
         },
 ])
 
