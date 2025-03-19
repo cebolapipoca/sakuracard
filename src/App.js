@@ -8,7 +8,7 @@ import Button from './Componentes/Button/Button'
 import Cards_Exhibition from './Componentes/Cards_exhibition_Container/Cards_Exhibition';
 import Lupa_Icon from './imagens/icons/lupa_icon.svg'
 import SearchBar from './Componentes/Search_Bar/SearchBar';
-
+import Message from './Componentes/Alert_Message/Message';
 
  
 function App() {
@@ -31,6 +31,8 @@ function App() {
       <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
       <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
       <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
+
+      <Message/>
   </div>
   );
 }

@@ -48,7 +48,7 @@ function Header()
                     
                     <div className="imagens_header">
                         <ul className="navBar_header">
-                            <a href="Favorites">Favoritos</a>
+                            <a href="/Favorites">Favoritos</a>
                             <a href="/MyOrder">Meus Pedidos</a>
                             <a>Cartas</a>
                             <a>Desenvolvedores</a>

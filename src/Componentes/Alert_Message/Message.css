@@ -1,0 +1,37 @@
+
+@keyframes AnimationLoading {
+    from {
+        top: -5%;
+    }
+
+    to {
+        top: 5%;
+    }
+}
+
+.message_box {
+    position: fixed;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 60px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #FDBDBD, #e69a9a, rgb(219, 101, 101));
+    border: none;
+    animation: AnimationLoading 1s;
+   display: none;
+    
+
+    & img {
+        width: 8%;
+    }
+
+    & h1 {
+        font-size: 23px;
+        margin-left: 30px;
+    }
+}

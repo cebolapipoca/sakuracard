@@ -2,6 +2,7 @@ import react from "react";
 import "./Login.css"
 import InputSakura from "../Input/InputSakura";
 import { AbrirLogin, AbrirCadastro } from "../Menu/Menu";
+import { AbrirMessageBox } from "../Alert_Message/Message";
 
 function Logar()
 {
@@ -10,12 +11,13 @@ function Logar()
     ClientesStorage.forEach(Cliente => {
         if(InputS_Cadastro[0].value == Cliente.Email && InputS_Cadastro[1].value == Cliente.Senha)
         {
-            console.log('USUARIO LOGADO COM SUCESSO')
+            AbrirMessageBox('Usuario logado com sucesso! :)')
+            console.log('afirmativo')
             sessionStorage.setItem('ClienteId', Cliente.Id)
         }
         else
         {
-            console.log('ERRO AO LOGAR. USUARIO NÃO ENCONTRADO. VERIFIQUE A SENHA/EMAIL E TENTE NOVAMENTE!')
+            AbrirMessageBox('ERRO AO LOGAR. USUARIO NÃO ENCONTRADO. VERIFIQUE A SENHA/EMAIL E TENTE NOVAMENTE!')
         }
     });
 }
