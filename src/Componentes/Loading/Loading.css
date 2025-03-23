@@ -1,0 +1,43 @@
+
+@keyframes AnimationLoading {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.Loading_circle {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #f59494;
+    position: fixed;
+    border-radius: 200px;
+    opacity: 100;
+}
+
+.container_loading {
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 60%);
+}
+
+#circle_intern {
+    z-index: 20;
+    border: none;
+    border-bottom: 7px solid #d37a7a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+    animation: AnimationLoading infinite 0.3s;
+}

@@ -1,5 +1,5 @@
 
-@keyframes AnimationLoading {
+@keyframes AnimationMessage {
     from {
         top: -5%;
     }
@@ -22,7 +22,7 @@
     align-items: center;
     background: linear-gradient(to right, #FDBDBD, #e69a9a, rgb(219, 101, 101));
     border: none;
-    animation: AnimationLoading 1s;
+    animation: AnimationMessage 1s;
    display: none;
     
 

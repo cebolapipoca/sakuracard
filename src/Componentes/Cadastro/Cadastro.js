@@ -2,6 +2,7 @@ import react from "react";
 import '../Login/Login.css'
 import InputSakura from "../Input/InputSakura";
 import { AbrirCadastro } from "../Menu/Menu";
+import { AbrirMessageBox } from "../Alert_Message/Message";
 
 function Cadastro()
 {
@@ -36,6 +37,7 @@ function Cadastro()
         console.log(OldData)
         OldData.push(Infos)
         localStorage.setItem('Clientes', JSON.stringify(OldData))
+        AbrirMessageBox("Usuário cadastrado com sucesso!")
     }
 
     function CountClient()

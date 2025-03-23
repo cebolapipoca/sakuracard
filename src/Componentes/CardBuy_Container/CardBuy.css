@@ -41,7 +41,6 @@
     align-items: center;
     border-radius: 30px;
     background: linear-gradient(to right, #FDDEDE, #FDE7E7, #FDF0F0, #FDEAEA);
-    
 }
 
 .ShowCardImage {
@@ -113,4 +112,55 @@
     }
 }
 
+@media screen and (min-width: 700px)
+{
+    .ShowCardImage {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    
+        & .Card_Image {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+    
+        & img {
+            width: 30%;
+        }
+    }
 
+    .CardBuy_Container {
+        width: 80%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        background: linear-gradient(to right, #FDDEDE, #FDE7E7, #FDF0F0, #FDEAEA);
+    }
+
+    .Card_Title {
+        width: 78%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    
+        & h1 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    
+        & img {
+            width: 4%;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+    }
+
+}

@@ -14,6 +14,9 @@ function Card_Page()
         <div>
             <Header/>
             <CardBuy/>
+            <Cards_Exhibition/>
+            <Cards_Exhibition/>
+            <Cards_Exhibition/>
         </div>
     )
 }
