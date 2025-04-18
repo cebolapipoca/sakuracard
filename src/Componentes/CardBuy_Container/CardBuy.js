@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import pokemon from 'pokemontcgsdk'
 import heart_icon from '../../imagens/icons/heart_icon.svg'
+import Message, { AbrirMessageBox } from "../Alert_Message/Message";
 
 pokemon.configure({apiKey: '34b24c5b-9f85-4cc4-9bf6-d15f006584c7'})
 
@@ -54,7 +55,10 @@ function CardBuy()
                 {
                    let CardData = data
                    CardData.price = price
-                   Cliente.Carrinho.push(CardData)
+                   if(Cliente.Carrinho.push(CardData))
+                   {
+                        AbrirMessageBox('Item Adicionado ao Carrinho')
+                   }
                 }
             });
         
@@ -95,9 +99,9 @@ function CardBuy()
     return (
         
     <div className="CarBuy_Section">
-
+        <Message/>
         <div className="Card_Title">
-            <h1 className="">Blastoise</h1>
+            <h1 className="">{data.name}</h1>
             <img src={heart_icon} onClick={AdicionarFavoritos}></img>
         </div>
 

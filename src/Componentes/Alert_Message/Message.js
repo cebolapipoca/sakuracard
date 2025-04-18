@@ -4,6 +4,7 @@ import './Message.css'
 
 export function AbrirMessageBox(message)
 {
+  <Message/>
   const messagebox = document.getElementById('message_box')
   const messageboxtext = document.getElementById('messagebox_text')
   messageboxtext.textContent = message
@@ -11,9 +12,14 @@ export function AbrirMessageBox(message)
   
 }
 
+
+
 export default function Message() {
 
   const [reset, UseReset] = useState(false)
+
+  const messageBox = document.getElementById('message_box')
+
 
   function ReduzirOpacidade()
   {
@@ -30,20 +36,15 @@ export default function Message() {
            UseReset(false)
            UseReset(true)
         }, 1000)
-     }, 5000)
+     }, 1500)
   }
 
-    if(reset)
-    {
-      ReduzirOpacidade()
-    }
+    
 
   return (
-    <div className='message_box' onLoad={ReduzirOpacidade} id='message_box'>
+    <div className='message_box'  id='message_box' onAnimationEnd={ReduzirOpacidade}>
       <img src='https://e7.pngegg.com/pngimages/49/443/png-clipart-x-mark-x-button-wrong-close-button-icon-thumbnail.png'/>
       <h1 id='messagebox_text'></h1>
     </div>
-
-    
   )
 }

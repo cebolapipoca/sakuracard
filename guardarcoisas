@@ -1,120 +1,26 @@
+function PokemonAPI()
 {
-                    props.randomCardTable.map(
-                    (dado)=>(
-                        //<Card key={dado.id} price={dado.cardmarket != undefined? dado.cardmarket.prices.trendPrice + "€" : "2.50€"}></Card> 
-                        <Card key={dado.id} image={dado.images.large} price={dado.cardmarket != undefined? dado.cardmarket.prices.trendPrice + "€" : "2.50€"}></Card>
-                    )
+        const TableCardType = [
+                {nameType: "Pokemon", Url: "https://api.pokemontcg.io/v2/cards", requestData: undefined},
+            ]
 
-                    )
-                }
-
-                function RandomizerCardExibithion(CardType)
-                    {
-                
-                    let randomCardTable = [
-                        ["Pokemon"] = [],
-                        ["Yugioh"] = [],
-                        ["Magic"] = []
-                    ]
-                
-                    const [randomCard, setRandomCard] = useState([])
-                
-                    const CardsTypeURL = {
-                        "Pokemon": "https://api.pokemontcg.io/v2/cards",
-                        "Yugioh": null,
-                        "Magic": null
-                        }
-                
-                        function RandomNumber(min, max)
-                        {
-                            
-                            let minCeiled = Math.ceil(min);
-                            let maxFloored = Math.floor(max);
-                            let Rand_Numb =  Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)
-                
-                            return Rand_Numb;
-                        }
-                
-                        function RandomizeCard(CardDataTable, NumberTimeRandomCard)
-                        {
-                            for(let i=1; i < NumberTimeRandomCard; i++)
-                            {
-                                randomCardTable[CardType].push(CardDataTable[RandomNumber(0, 249)])
-                            }
-                
-                            return randomCardTable[CardType]
-                        }
-                
-                    CardsTypeURL.forEach(URL=> 
-                    {
-                        if(CardType == "Pokemon")
-                        {
-                        fetch(URL, {
-                            method: "GET"
-                        }).then(dataType => dataType.json())
-                        .then((data)=>{
-                            setRandomCard(RandomizeCard(data.data, 5))
-                        })
-                        }
-                    });
-                    }
-
-
-
-
-
-
-
-                    const [card, setCard] = useState([])
-  const [randomCard, setRandomCard] = useState([])
-
-  const [CardType, setCardType] = useState({
-    "Pokemon": null,
-    "Yugioh": null,
-    "Magic": null
-  })
-
-  let randomCardTable = []
-
-
-  
-  function RandomNumber(min, max)
-  {
-    
-    let minCeiled = Math.ceil(min);
-    let maxFloored = Math.floor(max);
-    let Rand_Numb =  Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled)
-
-    return Rand_Numb;
-  }
-
- 
-  useEffect(()=>
-  {
-    fetch("https://api.pokemontcg.io/v2/cards", {
-        method: "GET",
-    }).then(result => result.json()).then(cards => {
-          console.log(cards.data[249])
-          console.log("dados realizados com sucesso")
-
-          setCard(cards.data)
-          
-        for(let i=1; i <= 5; i++)
-        {
-          let random = RandomNumber(0, 249)
-          randomCardTable.push(cards.data[random])
-
-          randomCardTable.forEach(CardRandom => 
-          {
-            if(CardRandom.id == randomCardTable[randomCardTable.length - 1])
+            let tableData = []
+            TableCardType.forEach(ApiType => 
               {
-                i--
-                randomCardTable.pop()
-                console.log("REROLOU")
-              }
-          });
-        }
-
-        setRandomCard(randomCardTable)
-    })
-  }, []);
+                  fetch(ApiType.Url, {
+                      method: 'GET',
+                  }).then(resultType => resultType.json()).then((result)=>{
+        
+                    result.data.forEach(element => {
+                      if(element.tcgplayer != undefined || element.tcgplayer != null)
+                      {
+                        tableData.push(element)
+                      }
+                      else {
+                       
+                      }
+                    });
+                     SetData(result)
+                  })
+              });
+}

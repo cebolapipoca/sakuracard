@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
@@ -8,6 +8,11 @@ import CarBuy from './Pages/CarBuy_Page/CarBuy.js';
 import FavoritePage from './Pages/Favorite_Page/Favorite.js';
 import Order from './Pages/Order_Page/Order.js';
 import Search from './Pages/Search_Page/Search.js';
+import ContextoTeste, { Contextozinho } from './Contextos/ContextoTeste.js';
+import Loading from './Componentes/Loading/Loading.js';
+import Politicas from './Pages/Politicas/Politicas.js';
+
+
 
 const Router = createBrowserRouter([
         {
@@ -34,13 +39,25 @@ const Router = createBrowserRouter([
                 path: '/Search/:q',
                 element: <Search/>
         },
-])
+        {
+                path: '/Politicas',
+                element: <Politicas/>
+        },
+    ])
+
+    
+        
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <RouterProvider router={Router}/>
-);
+                        root.render(
+                                <Contextozinho>
+                                        <RouterProvider router={Router}/>
+                                </Contextozinho> 
+                        );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

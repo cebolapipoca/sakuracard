@@ -1,6 +1,6 @@
 
 import './App.css';
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState, useEffect, createContext } from 'react';
 import Header from './Componentes/HeaderComponent/Header'
 import SlideImage from './Componentes/Slide_Images/SlideImage'
@@ -9,12 +9,21 @@ import Cards_Exhibition from './Componentes/Cards_exhibition_Container/Cards_Exh
 import Lupa_Icon from './imagens/icons/lupa_icon.svg'
 import SearchBar from './Componentes/Search_Bar/SearchBar';
 import Message from './Componentes/Alert_Message/Message';
-import Loading from './Componentes/Loading/Loading';
+import ContextoTeste from './Contextos/ContextoTeste';
+import { createBrowserRouter, RouterProvider, Routes, Route, BrowserRouter } from 'react-router-dom';
+import CarBuy from './Pages/CarBuy_Page/CarBuy';
+import Order from './Pages/Order_Page/Order';
+import FavoritePage from './Pages/Favorite_Page/Favorite';
+import Card_Page from './Pages/Card_Page/Card_Page';
+import Search from './Pages/Search_Page/Search';
 
-export const DataContext = createContext()
 
- 
-function App() {
+export function App() {
+
+  const sla = useContext(ContextoTeste)
+  console.log(sla)
+
+
 
   return (
     <div>
@@ -30,12 +39,9 @@ function App() {
         <Button ButtonText="Promoções"/>
       </nav>
 
-      <DataContext.Provider value={'teste'}>
-        <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
-        <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
-        <Cards_Exhibition title="Pokémon" CardType="Pokemon"/>
-      </DataContext.Provider>
-      
+      <Cards_Exhibition />
+      <Cards_Exhibition />
+      <Cards_Exhibition />
 
       <Message/>
   </div>

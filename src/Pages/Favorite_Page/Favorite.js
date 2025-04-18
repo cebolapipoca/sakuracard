@@ -24,18 +24,21 @@ export default function FavoritePage()
         return dados
     }
 
-    return (
-        <div>
-            <Header/>
-            <h1 className="Favorite_Title">Favoritos</h1>
-
-            <div className="favorite_list">
-                {
-                    PegarFavoritos().map((Favorito)=>(
-                        <FavoriteItem name={Favorito.Name} image={Favorito.Image} IdFav={Favorito.Id}/>
-                    ))
-                }
+    if(sessionStorage.getItem('ClienteId') != null || sessionStorage.getItem('ClienteId') != undefined )
+    {
+        return (
+            <div>
+                <Header/>
+                <h1 className="Favorite_Title">Favoritos</h1>
+    
+                <div className="favorite_list">
+                    {
+                        PegarFavoritos().map((Favorito)=>(
+                            <FavoriteItem name={Favorito.Name} image={Favorito.Image} IdFav={Favorito.Id}/>
+                        ))
+                    }
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }

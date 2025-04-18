@@ -23,8 +23,7 @@
     background: linear-gradient(to right, #FDBDBD, #e69a9a, rgb(219, 101, 101));
     border: none;
     animation: AnimationMessage 1s;
-   display: none;
-    
+    display: none;
 
     & img {
         width: 8%;

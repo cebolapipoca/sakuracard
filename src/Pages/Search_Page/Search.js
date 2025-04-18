@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './Search.css'
 import Header from "../../Componentes/HeaderComponent/Header";
 import SearchBar from "../../Componentes/Search_Bar/SearchBar";
@@ -13,9 +13,11 @@ export default function Search()
     
     pokemon.configure({apiKey: '123abc'})
     const [card, SetCard] = useState([])
+    let search = useParams().q
 
     function CarregarCard(q)
     {
+        console.log('aaaaaaa')
         let tableCard = []
         pokemon.card.where({q: 'name:' + q + '*'}).then(result => {
             
@@ -33,13 +35,15 @@ export default function Search()
                     SetCard(tableCard)
             });
 
-                
-            
-            
         })
     }
 
-    CarregarCard(useParams().q)
+    
+
+    useEffect(()=>{
+        CarregarCard(search)
+    }, [])
+   
 
     return (
         <div>

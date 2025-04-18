@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import "./Cards_Exhibition.css";
 import Card_Real from "../Cards/Card";
-import { DataContext } from "../../App";
 import card1 from "../../imagens/cards/image 30.png"
 import card2 from "../../imagens/cards/card.png"
 import { data } from "react-router-dom";
 import Loading from "../Loading/Loading";
+import ContextoTeste, { ContextTeste } from "../../Contextos/ContextoTeste";
 
 
 
@@ -15,64 +15,85 @@ function Cards_Exhibition(props)
 
     const [Card, setCard] = useState([])
     const [loading, setLoading] = useState(false)
-    const ContextTeste = useContext(DataContext);
-    console.log(ContextTeste)
-    
+    const [load, setLoad] = useState(false)
+    const ContextTeste = useContext(ContextoTeste);
+   
   
     
+    console.log(ContextTeste)
 
-   
-
-    function GetCard(CardType, LimitCard, Randomizer)
-    {
-        const TableCardType = [
-            {nameType: "Pokemon", Url: "https://api.pokemontcg.io/v2/cards", requestData: undefined},
-        ]
-
-        function Randomizer(min, max, tableCard)
+    function Randomizer(min, max, tableCard, LimitCard)
         {
+            
             let CardRandomTable = []
             min = Math.ceil(min);
             max = Math.floor(max);
             let rand_number = Math.floor(Math.random() * (max - min) + min)
+            let tableteste = tableCard.data
+            
+            
 
-            for(let i=0; i < LimitCard; i++)
-            {
-                rand_number = Math.floor(Math.random() * (max - min) + min)
-
-                try {
-                    if(Object.values(tableCard[rand_number].tcgplayer.prices)[0].low != undefined)
-                    {
-                        CardRandomTable.push(tableCard[rand_number])
-                        setLoading(true)
-                    }
-                }catch {
-                    i--
-                }
-
-                //CardRandomTable.push(tableCard[rand_number])
-            }
-
-            setCard(CardRandomTable)
-        }
-
-        TableCardType.forEach(ApiType => 
+        if(tableteste != undefined || tableteste != null)
         {
-            fetch(ApiType.Url, {
-                method: 'GET'
-            }).then(resultType => resultType.json()).then((result)=>{
-                Randomizer(1, 250, result.data)
-               
-            })
-        });
 
+            try { 
+                for(let i=0; i < LimitCard; i++)
+                {
+                    rand_number = Math.floor(Math.random() * (max - min) + min)
+                    CardRandomTable.push(tableteste[rand_number])
+                    setLoad(true)
+                }
+                console.log('sexo')
+                console.log(CardRandomTable)
+                setCard(CardRandomTable)
+            }catch {
+                console.log('erro')
+               
+            }
+            /*for(let i=0; i < LimitCard; i++)
+                {
+                   
+                   
+                    
+    
+                   /* try {
+                        if(tableteste[0][rand_number].tcgplayer.prices[0].low != undefined)
+                        {
+                            CardRandomTable.push(tableCard[rand_number])
+                            setLoading(true)
+                        }
+                    }catch {
+                        console.log('caiu no catch')
+                        i--
+                    }
+    
+                    //CardRandomTable.push(tableCard[rand_number])
+                }*/
+        }
     }
 
-   
-
+    function GetPrice(dataCard)
+    {
+        if(dataCard.tcgplayer != undefined || dataCard.tcgplayer != null)
+        {
+            if(dataCard.tcgplayer.prices != undefined || dataCard.tcgplayer.prices != null)
+            {
+                console.log(Object.values(dataCard.tcgplayer?.prices)[0].mid)
+                return Object.values(dataCard.tcgplayer?.prices)[0].mid
+            }
+            else {
+                console.log(Object.values(dataCard.cardmarket?.prices).trendPrice)
+                return Object.values(dataCard.cardmarket?.prices).trendPrice
+            }
+        }
+    }
+    
     useEffect(()=>{
-        GetCard(props.CardType, 6, true)
-    }, [])
+       if(load == false)
+       {
+        Randomizer(0, 200, ContextTeste, 5)
+       }
+    }, [ContextTeste])
 
     if(Card.length == 0 )
     {
@@ -107,7 +128,7 @@ function Cards_Exhibition(props)
                 <div className="cards_exhibition_content">
                     {
                         Card.map((dataCard)=>(
-                            <Card_Real keys={dataCard.id} image={dataCard.images?.large} price={Object.values(dataCard.tcgplayer?.prices)[0].mid + " R$"}></Card_Real>
+                            <Card_Real keys={dataCard.id} image={dataCard.images?.large} price={GetPrice(dataCard)}>{}</Card_Real>
                         ))
                     
                     }
