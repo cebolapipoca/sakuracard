@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/sakuracard/static/css/main.35da3418.css",
+    "main.js": "/sakuracard/static/js/main.6037ca91.js",
+    "static/media/Background_Sakura.jpg": "/sakuracard/static/media/Background_Sakura.3c29b2c02775bc4de41c.jpg",
+    "static/media/BuyCar_Icon.svg": "/sakuracard/static/media/BuyCar_Icon.8fd80790d10faaf9151a82652836700e.svg",
+    "static/media/slide_1.png": "/sakuracard/static/media/slide_1.40d4709c91c8270f2aed.png",
+    "static/media/Knewave-Regular.ttf": "/sakuracard/static/media/Knewave-Regular.1db5694b7a2fc23ca86b.ttf",
+    "static/media/card.png": "/sakuracard/static/media/card.923733cd16eba28157ef.png",
+    "static/media/gear_icon.svg": "/sakuracard/static/media/gear_icon.50b68a0e5d5b4767d0728387ead58d74.svg",
+    "static/media/SakuraCard_Icon.svg": "/sakuracard/static/media/SakuraCard_Icon.6552db9836384df81d2184dbc412c5ba.svg",
+    "static/media/arrow_left_minimalist.svg": "/sakuracard/static/media/arrow_left_minimalist.8da9ba91a893ce155bff17d5a23996fb.svg",
+    "static/media/card_icon.svg": "/sakuracard/static/media/card_icon.61b4e346246dc67d46d859f6675a78bb.svg",
+    "static/media/Programming_icon.svg": "/sakuracard/static/media/Programming_icon.ee5234eb82478c8523873bddea92903e.svg",
+    "static/media/lupa_icon.svg": "/sakuracard/static/media/lupa_icon.2f41f89917cf4f3551b838ad2517c94d.svg",
+    "static/media/shield_icon.svg": "/sakuracard/static/media/shield_icon.0973822d078a4e746fe5de6ff3720221.svg",
+    "static/media/bag_icon.svg": "/sakuracard/static/media/bag_icon.395bbbacf013f9e730617eb34f0effc8.svg",
+    "static/media/heart_preenchido.svg": "/sakuracard/static/media/heart_preenchido.d357fd69d73a4be87946a251b267fcb2.svg",
+    "index.html": "/sakuracard/index.html",
+    "static/media/user_icon.svg": "/sakuracard/static/media/user_icon.d7a0a115b648ce69983901bbaf650f7f.svg",
+    "static/media/user_pink_icon.svg": "/sakuracard/static/media/user_pink_icon.5462e18fccc462a0642fe7cbbee5b33e.svg",
+    "static/media/arrow_left_icon.svg": "/sakuracard/static/media/arrow_left_icon.daab65279ed63326b1021fd782a0ac24.svg",
+    "static/media/heart_icon.svg": "/sakuracard/static/media/heart_icon.4679ca5e50a6cf37c89ef2db1b435098.svg",
+    "static/media/MenuSakuraCard_Icon.svg": "/sakuracard/static/media/MenuSakuraCard_Icon.b27be8777875e27ddd64ed0c4bae248c.svg",
+    "main.35da3418.css.map": "/sakuracard/static/css/main.35da3418.css.map",
+    "main.6037ca91.js.map": "/sakuracard/static/js/main.6037ca91.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.35da3418.css",
+    "static/js/main.6037ca91.js"
+  ]
+}
