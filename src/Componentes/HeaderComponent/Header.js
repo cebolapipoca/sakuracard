@@ -43,12 +43,12 @@ function Header()
                 <div className="header_content">
                     <div className="title_header">
                         <img id="sakura_icon" src={SakuraCard_Icon}></img>
-                        <h1 id=""><a href="/" style={{color: "#FDBDBD"}}>Sakura Cards</a></h1>
+                        <h1 id=""><a href="/sakuracard" style={{color: "#FDBDBD"}}>Sakura Cards</a></h1>
                     </div>
                     
                     <div className="imagens_header">
                         <ul className="navBar_header">
-                            <a href="/#/Favorites">Favoritos</a>
+                            <a href="#/Favorites">Favoritos</a>
                             <a href="/#/MyOrder">Meus Pedidos</a>
                             <a>Cartas</a>
                             <a>Desenvolvedores</a>
