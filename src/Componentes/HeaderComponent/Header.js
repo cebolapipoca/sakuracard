@@ -48,13 +48,13 @@ function Header()
                     
                     <div className="imagens_header">
                         <ul className="navBar_header">
-                            <a href="/Favorites">Favoritos</a>
-                            <a href="/MyOrder">Meus Pedidos</a>
+                            <a href="/#/Favorites">Favoritos</a>
+                            <a href="/#/MyOrder">Meus Pedidos</a>
                             <a>Cartas</a>
                             <a>Desenvolvedores</a>
                         </ul>
 
-                        <a href="/CarBuy"><img src={BuyCar_Icon} id="buycar_button"></img></a>
+                        <a href="/#/CarBuy"><img src={BuyCar_Icon} id="buycar_button"></img></a>
                         <img src={Menu_Icon} onClick={()=>AbrirMenu(true)}  id="menu_button"></img>
                         <img src={User_Pink} id="user_button"></img>
                     </div>

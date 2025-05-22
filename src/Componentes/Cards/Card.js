@@ -10,7 +10,7 @@ function Card(props)
 {
     return (
 
-    <a className="Card" href={'/Card/' + props.keys}>
+    <a className="Card" href={'/#/Card/' + props.keys}>
         <div>
             <img src={props.image}></img>
             <h2>{props.price}</h2>
