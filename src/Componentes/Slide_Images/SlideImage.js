@@ -9,6 +9,7 @@ function Slide_Image(props)
 {
 
   const [slideAtual, setSlideAtual] = useState(1)
+  console.log(slideAtual)
   
   useEffect(()=>{
         const ClassImage = Array.from(document.getElementsByClassName('slideImagetrue'))
@@ -58,7 +59,7 @@ function Slide_Image(props)
         RadiosList.forEach(Radio => {
             if(Radio.checked)
             {
-                let slide = parseInt(Radio.attributes[1].value)
+                let slide = parseInt(Radio.attributes[1].value) + 1
                 setSlideAtual(slide)
             }
         });
@@ -75,19 +76,27 @@ function Slide_Image(props)
 
             <div className="slideIndicators">
 
-                <input type="radio" className="slideRadio" slidenumber={1} onChange={()=>{MudarSlide()}} name="slideImageRadio" id="slideImageRadio1" defaultChecked></input>
-                <input type="radio" className="slideRadio" slidenumber={2} onChange={()=>{MudarSlide()}} name="slideImageRadio"id="slideImageRadio2"></input>
-                <input type="radio" className="slideRadio" slidenumber={3} onChange={()=>{MudarSlide()}} name="slideImageRadio" id="slideImageRadio3"></input>
+                {
+                    props.slideList.map((slide, i)=>(
+                        <input type="radio" className="slideRadio" slidenumber={i} onChange={()=>{MudarSlide()}} name="slideImageRadio" id={"slideImageRadio" + i}></input>
+                    ))
+                }
 
-                <label htmlFor="slideImageRadio1" ></label>
-                <label htmlFor="slideImageRadio2" ></label>
-                <label htmlFor="slideImageRadio3" ></label>
+                {
+                    props.slideList.map((slide, i)=>(
+                        <label htmlFor={"slideImageRadio" + i}></label>
+                    ))
+                }
+
+                
             </div>
 
             <div className="slideImages">
-                <img id="slideImage1" className="slideImagetrue" src={"https://copag.com.br/uploads/tinymce/Produto%2000.png"}></img>
-                <img id="slideImage2" className="slideImagetrue" src={"https://m.media-amazon.com/images/I/81M2GcPdrcL._AC_UF894,1000_QL80_.jpg"}></img>
-                <img id="slideImage3" className="slideImagetrue" src={"https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2022/12/pokemon-scarlet-and-violet-cover-art.jpg"}></img>
+                {
+                    props.slideList.map((slide)=>(
+                        <img className="slideImagetrue" src={slide.image}></img>
+                    ))
+                }
             </div>
         </div>
     )

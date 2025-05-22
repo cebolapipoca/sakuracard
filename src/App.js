@@ -21,9 +21,13 @@ import Search from './Pages/Search_Page/Search';
 export function App() {
 
   const sla = useContext(ContextoTeste)
-  console.log(sla)
-
-
+  
+  const slideList = [
+    {'image':'https://copag.com.br/uploads/tinymce/Produto%2000.png', 'link':''},
+    {'image':'https://m.media-amazon.com/images/I/81M2GcPdrcL._AC_UF894,1000_QL80_.jpg', 'link':''},
+    {'image':'https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2022/12/pokemon-scarlet-and-violet-cover-art.jpg', 'link':''},
+    {'image':"https://images.tcdn.com.br/img/img_prod/812609/combo_de_booster_pokemon_ev6_5_fabulas_nebulosas_copag_12624_1_f37a283fc5bdb75158256fce2dfe6ecb.jpg"}
+  ]
 
   return (
     <div>
@@ -31,7 +35,7 @@ export function App() {
 
       <SearchBar/>
 
-      <SlideImage></SlideImage>
+      <SlideImage slideList={slideList}></SlideImage>
 
       <nav className='nav_Buttons'>
         <Button ButtonText="Novas Coleções"/>
@@ -42,6 +46,7 @@ export function App() {
       <Cards_Exhibition />
       <Cards_Exhibition />
       <Cards_Exhibition />
+
 
       <Message/>
   </div>

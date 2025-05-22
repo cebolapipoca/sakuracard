@@ -101,7 +101,7 @@ function Cards_Exhibition(props)
             <div className="cards_exhibition_container">
                 <div className="cards_title">
                     <h1>{props.title}</h1>
-                    <h2>Ver mais -&gt;</h2>
+                    <h2 data-toggle="tooltip" title="Ver paz">Ver mais</h2>
                 </div>
     
                 <div className="cards_exhibition_content">
