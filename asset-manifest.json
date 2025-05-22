@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sakuracard/static/css/main.35da3418.css",
-    "main.js": "/sakuracard/static/js/main.53fcd5dc.js",
+    "main.js": "/sakuracard/static/js/main.c90910a4.js",
     "static/media/Background_Sakura.jpg": "/sakuracard/static/media/Background_Sakura.3c29b2c02775bc4de41c.jpg",
     "static/media/BuyCar_Icon.svg": "/sakuracard/static/media/BuyCar_Icon.8fd80790d10faaf9151a82652836700e.svg",
     "static/media/slide_1.png": "/sakuracard/static/media/slide_1.40d4709c91c8270f2aed.png",
@@ -23,10 +23,10 @@
     "static/media/heart_icon.svg": "/sakuracard/static/media/heart_icon.4679ca5e50a6cf37c89ef2db1b435098.svg",
     "static/media/MenuSakuraCard_Icon.svg": "/sakuracard/static/media/MenuSakuraCard_Icon.b27be8777875e27ddd64ed0c4bae248c.svg",
     "main.35da3418.css.map": "/sakuracard/static/css/main.35da3418.css.map",
-    "main.53fcd5dc.js.map": "/sakuracard/static/js/main.53fcd5dc.js.map"
+    "main.c90910a4.js.map": "/sakuracard/static/js/main.c90910a4.js.map"
   },
   "entrypoints": [
     "static/css/main.35da3418.css",
-    "static/js/main.53fcd5dc.js"
+    "static/js/main.c90910a4.js"
   ]
 }
