@@ -40,6 +40,7 @@ function Header()
     return (
         <>
             <header id="headerSakura">
+               
                 <div className="header_content">
                     <div className="title_header">
                         <img id="sakura_icon" src={SakuraCard_Icon}></img>
@@ -48,13 +49,13 @@ function Header()
                     
                     <div className="imagens_header">
                         <ul className="navBar_header">
-                            <a href="sakuracard/#/Favorites">Favoritos</a>
-                            <a href="sakuracard/#/MyOrder">Meus Pedidos</a>
+                            <a href="/sakuracard/#/Favorites">Favoritos</a>
+                            <a href="/sakuracard/#/MyOrder">Meus Pedidos</a>
                             <a>Cartas</a>
                             <a>Desenvolvedores</a>
                         </ul>
 
-                        <a href="sakuracard/#/CarBuy"><img src={BuyCar_Icon} id="buycar_button"></img></a>
+                        <a href="/sakuracard/#/CarBuy"><img src={BuyCar_Icon} id="buycar_button"></img></a>
                         <img src={Menu_Icon} onClick={()=>AbrirMenu(true)}  id="menu_button"></img>
                         <img src={User_Pink} id="user_button"></img>
                     </div>
