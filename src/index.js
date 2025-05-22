@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, createHashRouter } from 'react-router-dom';
 import Card_Page from './Pages/Card_Page/Card_Page.js';
 import CarBuy from './Pages/CarBuy_Page/CarBuy.js';
 import FavoritePage from './Pages/Favorite_Page/Favorite.js';
@@ -14,7 +14,7 @@ import Politicas from './Pages/Politicas/Politicas.js';
 
 
 
-const Router = createBrowserRouter([
+const Router = createHashRouter([
         {
                 path: '/',
                 element: <App/>
@@ -53,7 +53,7 @@ const Router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
                         root.render(
                                 <Contextozinho>
-                                <RouterProvider router={Router}/>
+                                        <RouterProvider router={Router}/>
                                 </Contextozinho> 
                         );
 
